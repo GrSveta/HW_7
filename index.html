@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DZ-7</title>
+    </head>
+<body>
+    <script>
+        let a = Number(prompt("a= "));
+        let n = Number(prompt("n= "));
+        let x = Number(prompt("x= "));
+
+        let k = n;
+        
+        function factorial (n) {
+        if (n === 0 || n === 1) return 1;
+        else return factorial(n-1) * n;}
+        
+        function factorial (k) {
+        if (k === 0 || k === 1) return 1;
+        else return factorial(k-1) * k;}
+
+        let summa = 0;
+        for (k; k>=0; k--) {
+        let fstNum = (factorial(n) / (factorial(k) * factorial(n-k))) * Math.pow(x, k) * Math.pow(a, (n - k));
+        summa = fstNum + summa;
+        }
+        let rpart = summa;
+        let lpart = Math.pow((x+a), n);
+        
+        if (lpart === rpart) {
+        alert(true);
+        } 
+        else {
+        alert(true);
+        }
+
+    </script>
+</body>
+</html>
